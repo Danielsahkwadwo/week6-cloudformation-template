@@ -1,0 +1,26 @@
+template-file-path: blue-green-deployment-template.yaml
+parameters:
+  AvailabilityZone1: eu-west-1a
+  AvailabilityZone2: eu-west-1c
+  ECSTaskCPU: '512'
+  VPCName: Week6Lab
+  PrivateSubnet2CIDR: 10.0.4.0/24
+  DatabasePassword: '****'
+  DatabaseName: myappdb
+  DeploymentConfigTerminationTimeout: '5'
+  S3BucketNameSuffix: myapp-bucket
+  DeploymentType: BLUE_GREEN
+  ECSServiceMaxCount: '4'
+  AppName: MyAppALB
+  PrivateSubnet1CIDR: 10.0.3.0/24
+  PublicSubnet2CIDR: 10.0.2.0/24
+  ECSClusterName: MyAppCluster
+  DatabaseUser: myappdbadmin
+  ContainerPort: '5000'
+  ECSServiceDesiredCount: '2'
+  DockerImage: public.ecr.aws/p2l9n5r2/week6-repository:danielkwadwosah_week6nodeapp
+  ECSServiceMinCount: '2'
+  PublicSubnet1CIDR: 10.0.1.0/24
+  VPCCidrBlock: 10.0.0.0/16
+  ECSTaskMemory: '1024'
+tags: {}
